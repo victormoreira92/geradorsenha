@@ -7,7 +7,7 @@ export class SenhaView{
             Fraca:['Fraca','url("../assets/img/fraco.jpg")','#ff8181'],
             Boa:['Boa','url("../assets/img/boa.jpg")','#ffae00'],
             Forte:['Forte','url("../assets/img/forte.jpg")','#0099ff'],
-            Muito_Forte:['Muito Forte','url("../assets/img/muito_forte.jpg")','#0000ff']
+            Muito_Forte:['Muito Forte','url("../img/muito_forte.jpg")','#0000ff']
         }
         this.element = '';
         this.senha = senha;
