@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Gerador de senha</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Gerador de senhas aleatórias</h1>
+        <h3 class="header__subtitle">Crie senhas fortes e seguras para proteger as suas contas na internet.</h3>
+    </header>
+
+    <main class="content">
+        <section class="illustration" id="image">
+        </section>
+        <section class="password__generator">
+            <div class="generator__container">
+                <div class="input__container">
+                    <div class="password__container">
+                    </div>
+                    <span class="badge">Muito forte</span>
+                    <button class="btn__generator" data-event = 'generator'>
+                        <i class="material-symbols-outlined" data-event = 'generator'>replay</i>
+                    </button>
+                </div>
+                <button class="btn-copy" id="copy">Copiar</button>
+            </div>
+            <div class="generator__settings">
+                <div class="section__number_range">
+                    <label for="length" class="label__number">Tamanho da Senha:</label>
+                    <div class="input__range_number">
+                        <input type="number" class="length__number" id="length" min="1" max="50" value="15" data-event = "generator">
+                        <input type="range" min="1" max="50" step="1" id="range" value="15" class="length__range" data-event = "generator">
+                    </div>  
+                </div>   
+                <div class="caracteres__settings">
+                    <div class="section__radio">
+                        <div class="radio__label">
+                            <input type="radio" value="-1" name="parameters" id="easy" class="radio__button" checked data-event = 'generator'> 
+                            <label for="easy">Fácil de pronunciar </label>
+                        </div><span class="information">i</span>  
+                        <div class="radio__label">
+                            <input type="radio" value="1" name="parameters" id="read" class="radio__button" data-event = 'generator'>
+                            <label for="read">Fácil de ler </label>
+                        </div><span class="information">i</span>
+                        <div class="radio__label">
+                            <input type="radio" value="0" name="parameters" id="all" class="radio__button" data-event = 'generator'>
+                            <label for="all">Todos os caracteres </label>
+                        </div><span class="information">i</span>
+
+                    </div>
+                    <div class="section_checkbox">
+                        <div class="checkbox-label">
+                            <input type="checkbox" name="tipo" id="lowercase" class="checkbox" data-tipo="easy" checked data-event = 'generator'>
+                            <label for="lowercase" class="label__caractere">
+                               Letra minúscula (a, b, c,  d ...)
+                            </label>
+                        </div>
+                        <div class="checkbox-label">                               
+                            <input type="checkbox" name="tipo" id="uppercase" class="checkbox" data-tipo="easy" checked data-event = 'generator'>
+                            <label for="uppercase" class="label__caractere">
+                                Letra Maiúscula (A,B,C,D...)
+                            </label>
+                        </div>
+
+                        <div class="checkbox-label">
+                            <input type="checkbox" name="tipo" id="number" class="checkbox" data-tipo="all" data-event = 'generator' disabled>
+                            <label for="number" class="label__caractere">
+                                
+                                Números (1,2,3,4 ...)
+                            </label>
+                        </div>
+
+                        <div class="checkbox-label">
+                            <input type="checkbox" name="tipo" id="special" class="checkbox" data-tipo="all" data-event = 'generator' disabled>
+                            <label for="special" class="label__caractere">
+                                Caracteres especiais (*,/, +, @, # ...)
+                            </label>
+                        </div>
+                    </div>
+                    
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>

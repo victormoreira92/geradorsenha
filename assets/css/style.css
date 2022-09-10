@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap');
+
+html{
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background: rgb(219,214,255);
+}
+/*HEADER*/
+.header{
+    padding: 30px 0;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+.header__title{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.header__subtitle{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/*CONTENT*/
+.content{
+    column-gap: 35px;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    width: 100%;
+}
+
+/*Section Ilustration*/
+.illustration{
+    background-size: 100% 100%;
+    background-position: center;
+    height: 440px;
+    padding: 0 25px;
+    width: 260px;
+    position: relative;
+    transition: all 500ms ease;
+    animation: fade-in 500ms ease;
+
+}
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/*Password Section*/
+.password__generator{
+    width: 900px;
+}
+.generator__container{
+    display: flex;
+    margin: 20px 0;
+}
+.input__container{
+    width: 75%;
+    display: flex;
+    background: rgb(252, 252, 252);
+    border: 2px solid blue;
+    border-radius: 15px;
+    margin-right: 10px;
+
+}
+.password__container{
+    height: 2rem;
+    padding: 5px 2px 0 5px;
+    width: 80%;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+.badge{
+    background-color: #0000ff;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 1.2rem;
+    margin: 3px 0 0 0;
+    padding: 5px 2px;
+    text-align:center;
+    width: 5.5rem;
+}
+.btn__generator{
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 0 0 4px;
+    padding: 0;
+    text-align: center;
+    width:3rem;    
+
+}
+i{
+    font-size: 1.5rem;
+    transition: all 500ms linear;
+}
+
+.btn__generator:active i{
+    animation: btn_animation 500ms linear;
+}
+
+@keyframes btn_animation {
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(-180deg);
+    }
+    100%{
+        transform: rotate(-360deg)
+    }
+}
+.btn-copy{
+    background-color: blue;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100px;
+    position: relative;
+    box-shadow: 5px 5px 5px rgba(46, 46, 199, 0.911);
+
+
+}
+.btn-copy:hover{
+    box-shadow: 2px 2px 2px rgba(46, 46, 199, 0.911);
+
+}
+/*Generator Settings*/
+
+.generator__settings{
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+/**Range and input-number*/
+.section__number_range{
+    display: flex;
+    column-gap: 20px;
+}
+
+.length__number{
+    font-size: 1.5rem;
+    border: 2px solid #0000ff;
+    margin-top: 3px;
+}
+.label__number{
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+.length__range{
+    width: 370px;
+}
+/*Chacaraters Settings*/
+
+.caracteres__settings{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Radio Buttons */
+.section__radio{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+}
+.radio__label{
+    margin-top: 15px;
+}
+
+.radio__button{
+    width: 2rem;
+    height: 2rem;
+}
+.information{
+    width: 15px;
+    height: 15px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background: black;
+    position: relative;
+    top: -1.8rem;
+    left:16.6rem;
+    font-size: 14px;
+    color: #e1e1e1;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 2px;
+}
+
+.information:nth-of-type(2){
+    left:10.5rem
+}
+.information:nth-of-type(1){
+    left:15.9rem
+}
+.information::after{
+    content:'Texto explicativo';
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height: 40px;
+    color: black;
+    position: absolute;
+    left: 1.2rem;
+    top: -10px;
+    text-align: start;
+    border-radius: 5px;
+    padding: 7px 5px;
+    box-shadow: 2px 3px 2px #e1e1e1;
+    border: 1px  solid #e1e1e1;
+    line-height: 1.2rem;
+    display: none;
+    transition: opacity 500ms ease;
+
+}
+.information:nth-of-type(1)::after{
+    content:'Evite números e caracteres especiais.'
+}
+.information:nth-of-type(2)::after{
+    content:'Evite carcteres ambíguos como 0, O e I e 1.'
+}
+.information:nth-of-type(3)::after{
+    content:'Qualquer combinação de caracteres como !, 4, t, A.'
+}
+
+.information:hover::after{
+    display: initial;
+    opacity: 1;
+}
+
+/*CheckBox*/
+
+.checkbox{
+    height: 25px;
+    margin-bottom: 6px;
+    width: 25px;
+}
+
+.section_checkbox{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.checkbox-label{
+    margin: 10px 0;
+}
+
